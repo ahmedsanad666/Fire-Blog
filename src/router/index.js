@@ -1,25 +1,67 @@
-import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import { createRouter, createWebHistory } from "vue-router";
 
+import HomePage from "../views/HomePage";
+import BlogPage from "../views/BlogPage";
+import AuthPage from "../views/AuthPage";
+import ForgetPass from "../components/Auth/ForgetPass";
+import ProfilePage from "../views/ProfilePage";
 const routes = [
   {
-    path: '/',
-    name: 'home',
-    component: HomeView
+    path: "/",
+    redirect: "/home",
   },
   {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
-  }
-]
+    path: "/home",
+    name: "home",
+    component: HomePage,
+    meta: {
+      title: "Home",
+    },
+  },
+  {
+    path: "/blogs",
+    name: "blogs",
+    component: BlogPage,
+    meta: {
+      title: "Blogs",
+    },
+  },
+  {
+    path: "/auth",
+    name: "auth",
+    component: AuthPage,
+    children: [
+      {
+        path: "resetpassword",
+        name: "password",
+        component: ForgetPass,
+        meta: {
+          title: "password",
+        },
+      },
+    ],
+    meta: {
+      title: "register",
+    },
+  },
+  {
+    path: "/profile",
+    name: "profile",
+    component: ProfilePage,
+    meta: {
+      title: "profile",
+    },
+  },
+];
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
-  routes
-})
+  routes,
+});
 
-export default router
+router.beforeEach((to, _, next) => {
+  document.title = `${to.meta.title} | FireBlog`;
+  next();
+});
+
+export default router;

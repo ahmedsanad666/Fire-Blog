@@ -1,0 +1,26 @@
+vue.js {
+
+computed props:- 
+ 
+ computed: {
+    fullName: {
+      // getter
+      get() {
+        return this.firstName + ' ' + this.lastName
+      },
+      // setter
+      set(newValue) {
+        // Note: we are using destructuring assignment syntax here.
+        [this.firstName, this.lastName] = newValue.split(' ')
+      }
+    }
+  }
+
+...............
+ vue life cycle hook.
+ 
+
+
+
+
+}

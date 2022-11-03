@@ -1,0 +1,44 @@
+.auth {
+  height: 99vh;
+  padding: 0;
+
+  @media only screen and (min-width: 992px) {
+    overflow: hidden;
+  }
+  .auth-wrape {
+    height: 100%;
+
+    .auth-section {
+      width: 80%;
+      margin: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 10%;
+      position: relative;
+      form {
+        padding: 3rem 3rem 4rem;
+        box-shadow: 0px 0px 4px rgba($color: #000000, $alpha: 1);
+        border-radius: 1rem;
+        cursor: pointer;
+        background: rgba($color: #000000, $alpha: 0.09);
+        backdrop-filter: blur(10px);
+      }
+    }
+    .layout {
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -150px;
+        height: 100vh;
+        border-bottom: 100vh solid #2d3436;
+        border-left: 150px solid transparent;
+      }
+      position: relative;
+      top: 0;
+      right: 0;
+      background: #2d3436;
+    }
+  }
+}

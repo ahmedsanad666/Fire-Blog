@@ -1,0 +1,98 @@
+.profile {
+  position: relative;
+  padding: 0.5em;
+  background-color: $color-secondary;
+  color: $color-light;
+  border-radius: 50% 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  &:hover,&:focus {
+    .profile-menu {
+    height: 271px;
+      opacity: 100%;
+      width: 300px 
+      }
+  }
+  span {
+    text-transform: uppercase;
+  }
+  .profile-menu {
+    position: absolute;
+    background-color: $color-secondary;
+    top: 39px;
+    left:-230px;
+    border-radius: 0.5em;
+    padding: 10px 15px;
+    padding-bottom: 0;
+    overflow: hidden;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    transition: 0.5s height ease-in-out;
+z-index: 99;
+    .info {
+        margin-bottom:18px;
+      .row {
+        text-align: center;
+
+        .name {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-left: 0.1rem;
+          span {
+            padding: 10px;
+            border-radius: 50% 50%;
+            height: 50px;
+            width: 50px;
+            background-color: $color-light;
+            color: $color-secondary;
+            font-family: $cool-font;
+            font-size: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+        }
+      }
+      .userName {
+        margin-right: 0.3rem;
+        padding: 5px 20px;
+        h6:nth-child(1) {
+          font-size: 14px;
+          text-transform: uppercase;
+        }
+      }
+    }
+    .links {
+      a {
+        color: $color-light;
+        // border: 1px red solid;
+        padding-right: 164px;
+        padding-top: 7px;
+        padding-bottom: 7px;
+      }
+
+      padding-left: 0.4rem;
+      letter-spacing: 2px;
+      padding-top: 4px;
+      padding-bottom: 5px;
+      border-image: linear-gradient(to left, #8c1212, #0b0b0a) 30;
+      border-width: 1px;
+      border-style: solid;
+      transition: 0.3s all ease-in-out;
+
+      &:hover {
+        background-color: #681910;
+      }
+    }
+  }
+}
+
+// @keyframes w{
+
+// }
