@@ -26,7 +26,7 @@
               <router-link to="blogs" class="nav-link">Blog</router-link>
             </li>
             <li class="nav-item">
-              <router-link to="#" class="nav-link">Create Post</router-link>
+              <router-link :to="{name : 'creatPost'}" class="nav-link">Create Post</router-link>
             </li>
             <li class="nav-item" v-if="!isAuthenticated">
               <router-link :to="{ name: 'auth' }" class="nav-link"

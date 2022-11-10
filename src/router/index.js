@@ -5,6 +5,8 @@ import BlogPage from "../views/BlogPage";
 import AuthPage from "../views/AuthPage";
 import ForgetPass from "../components/Auth/ForgetPass";
 import ProfilePage from "../views/ProfilePage";
+import CreatPost from "../views/CreatPost";
+
 const routes = [
   {
     path: "/",
@@ -50,6 +52,14 @@ const routes = [
     component: ProfilePage,
     meta: {
       title: "profile",
+    },
+  },
+  {
+    path: "/CreatPost",
+    name: "creatPost",
+    component: CreatPost,
+    meta: {
+      title: "CreatPost",
     },
   },
 ];
