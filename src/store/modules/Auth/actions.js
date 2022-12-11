@@ -21,7 +21,7 @@ export default {
       email: payload.email,
     };
 
-    console.log(newUser);
+ 
 
     //send response to  signup user infos
     const response = await createUserWithEmailAndPassword(

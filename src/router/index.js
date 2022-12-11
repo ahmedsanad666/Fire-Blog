@@ -7,6 +7,8 @@ import ForgetPass from "../components/Auth/ForgetPass";
 import ProfilePage from "../views/ProfilePage";
 import CreatPost from "../views/CreatPost";
 
+import BlogPreview from '../views/BlogPreview';
+
 const routes = [
   {
     path: "/",
@@ -60,6 +62,14 @@ const routes = [
     component: CreatPost,
     meta: {
       title: "CreatPost",
+    },
+  },
+  {
+    path: "/BlogPreview",
+    name: "BlogPreview",
+    component: BlogPreview,
+    meta: {
+      title: "postReview",
     },
   },
 ];

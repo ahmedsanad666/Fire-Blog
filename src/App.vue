@@ -43,7 +43,7 @@ export default {
 
         if (user) {
           this.$store.dispatch("getCurrentUser");
-          console.log("login");
+        
         } else {
           
           console.log("OUT");

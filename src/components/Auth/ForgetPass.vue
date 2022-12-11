@@ -32,7 +32,7 @@ export default {
       this.showMode = null;
     },
     async submitData() {
-      console.log(this.email);
+      
       const email = this.email;
       this.isLoading = true;
       try {

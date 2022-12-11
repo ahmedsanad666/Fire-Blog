@@ -4,9 +4,10 @@ import actions from "./actions";
 export default {
   namespaced: true,
   state: {
-    blogHeader: "Write your blog title here",
-    blogTitle: "",
+    blogHeader: "",
+    blogHtml: "Write your blog here",
     blogPhotoName: "",
+   
     blogPhotoFileUrl: null,
     blogPhotoPreview: null,
   },
